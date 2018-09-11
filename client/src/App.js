@@ -11,7 +11,7 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
 // Components
 
-import NavBar from './components/NavBar';
+import { NavBar } from './views';
 
 import Home from './components/Home';
 import User from './components/User';
@@ -72,7 +72,7 @@ class App extends Component {
         <ApolloProvider client={client}>
 
           <div className="App">
-            <NavBar/>
+            <NavBar auth={auth} />
             <Switch>
               <Route exact path='/' component={Home}/>
               <Route path='/user' component={User} />
